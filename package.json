@@ -1,0 +1,13 @@
+{
+  "name": "lexa-new",
+  "version": "0.1.0",
+  "private": true,
+  "main": "Gruntfile.js",
+  "dependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-less": "^1.0.1"
+  },
+  "devDependencies": {
+    "grunt-contrib-watch": "^0.6.1"
+  }
+}
