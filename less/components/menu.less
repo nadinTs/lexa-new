@@ -1,0 +1,82 @@
+.menu {
+  display: block;
+  float: right;
+  .clearfix;
+  padding: 20px 0;
+  &__item {
+    display: inline-block;
+    position: relative;
+  }
+  &__item a {
+    color: @color-text-menu;
+    font-size: 17px;
+    padding: 2px 20px;
+    text-align: center;
+    border-left:1px solid @color-text-menu;
+    text-transform: lowercase;
+    white-space: nowrap;
+  }
+
+  &__item--last a {
+    border-right:1px solid @color-text-menu;
+    border-left:1px solid @color-text-menu;
+  }
+  &__item:hover a {
+    background-color: @color-text-header;
+    color: @color-text-menu-hover;
+    border-color: @color-text-header;
+  }
+
+
+  &__sub-menu{
+    display: none;
+    padding: 5px 0;
+    background-color: @color-text-header;
+    width: 120px;
+    text-align: center;
+  }
+  &__sub-menu-item {
+    padding: 5px 0;
+    color: @color-text-menu-hover;
+    text-align: center;
+    border: none;
+  }
+
+  &__sub-menu-item a{
+    display: block;
+    margin: 0 auto;
+    border: 1px solid transparent;
+    padding: 0;
+    color: @color-text-menu-hover;
+    width: 105px;
+  }
+  &__sub-menu-item a:hover{
+
+    border-right: 1px solid @color-text-menu-hover;
+    border-left: 1px solid @color-text-menu-hover;
+  }
+
+  & li:hover &__sub-menu {
+    display: block;
+    position: absolute;
+    z-index: 100;
+  }
+
+
+  &__sub-menu li:hover:nth-last-child(2) + &__sub-menu-item a{
+      border-right-color: @color-text-header;
+    }
+
+  &--footer {
+    float: none;
+    text-align: center;
+  }
+
+}
+
+.menu li:hover + li a {
+  border-color:@color-text-header;
+}
+.menu li:hover:nth-last-child(2) + li a {
+  border-right-color: @color-text-menu;
+}
