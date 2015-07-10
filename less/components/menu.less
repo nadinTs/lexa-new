@@ -3,6 +3,9 @@
   float: right;
   .clearfix;
   padding: 20px 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   &__item {
     display: inline-block;
     position: relative;
@@ -32,7 +35,7 @@
     display: none;
     padding: 5px 0;
     background-color: @color-text-header;
-    width: 120px;
+    width: 119px;
     text-align: center;
   }
   &__sub-menu-item {
@@ -75,8 +78,11 @@
 }
 
 .menu li:hover + li a {
-  border-color:@color-text-header;
+  border-color: transparent;
 }
 .menu li:hover:nth-last-child(2) + li a {
   border-right-color: @color-text-menu;
+}
+.width-item-menu {
+  width: 119px;
 }
