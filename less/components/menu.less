@@ -73,6 +73,7 @@
   &--footer {
     float: none;
     text-align: center;
+    display: block;
   }
 
 }
@@ -85,4 +86,42 @@
 }
 .width-item-menu {
   width: 119px;
+}
+
+
+.current a {
+   color: @color-text-header;
+ }
+
+.current a:hover {
+  background-color: @color-text-menu-hover;
+  color: @color-text-header;
+  border-left-color: @color-text-menu;
+  border-right-color: @color-text-menu;
+
+}
+ul .current:hover + li a{
+  border-left: 1px solid @color-text-menu;
+}
+
+
+.current--main-menu a {
+  color: @color-text-header;
+}
+
+.year {
+  float: none;
+  text-align: center;
+
+  &__forward,
+  &__back {
+    display: inline-block;
+    padding: 5px;
+  }
+
+  & li:first-child + li a,
+  & li:hover:first-child + li a {
+    border-left-color: transparent;
+  }
+
 }

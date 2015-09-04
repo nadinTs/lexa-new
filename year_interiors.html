@@ -6,8 +6,9 @@
     <meta name="description" content="дизайн интерьеров в Пензе">
     <title>Мастерская визуального искусства</title>
     <link rel="stylesheet" href="css/style.css" type="text/css">
-
-
+    <script type="text/javascript" src="scripts/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="scripts/galleria-1.2.2.js"></script>
+    <script type="text/javascript" src="scripts/galleria.classic.js"></script>
 </head>
 <body>
 <div class="page">
@@ -21,7 +22,7 @@
             <ul class="menu"><!--
                 --><li class="menu__item"><a href="about.html">О нас</a></li><!--
                 --><li class="menu__item"><a href="contact.html">Контакты</a></li><!--
-                --><li class="menu__item width-item-menu current--main-menu">
+                --><li class="menu__item width-item-menu">
                 <a href="#">Портфолио</a>
                 <ul class="menu__sub-menu width-item-menu">
                     <li class="menu__sub-menu-item width-item-menu"><a href="interios.html">Интерьеры</a></li>
@@ -38,45 +39,25 @@
     </header>
     <main class="">
         <!--content-->
-        <article class="content_interiors">
-            <nav class="menu year">
-                <ul class="year"><!--
-                    --><li class="year__back"><a href="#"> < </a></li><!--
-                    --><li class="menu__item current"><a href="year_interiors.html">2015</a></li><!--
-                    --><li class="menu__item"><a href="#">2014</a></li><!--
-                    --><li class="menu__item"><a href="#">2013</a></li><!--
-                    --><li class="menu__item"><a href="#">2012</a></li><!--
-                    --><li class="menu__item"><a href="#">2011</a></li><!--
-                    --><li class="menu__item"><a href="#">2010</a></li><!--
-                    --><li class="menu__item"><a href="#">2009</a></li><!--
-                    --><li class="menu__item"><a href="#">2008</a></li><!--
-                    --><li class="menu__item"><a href="#">2007</a></li><!--
-                    --><li class="menu__item"><a href="#">2006</a></li><!--
-                    --><li class="menu__item"><a href="#">2005</a></li><!--
-                    --><li class="menu__item menu__item--last">...</li><!--
-                    --><li class="year__forward"><a href="#"> > </a></li><!--
-                --></ul>
-            </nav>
-
-            <section class="interiors-pic">
-                <a href="#x"><img  class="interiors-pic__img" src="img/slides/srub_View22.jpg"></a>
-                <a href="#x"><img  class="interiors-pic__img" src="img/slides/srub_View23.jpg"></a>
-                <a href="#x"><img  class="interiors-pic__img" src="img/slides/srub_View24.jpg"></a>
-                <a href="#x"><img  class="interiors-pic__img" src="img/slides/srub_View25.jpg"></a>
-                <a href="#x"><img  class="interiors-pic__img" src="img/slides/srub_View26.jpg"></a>
-                <a href="#x"><img  class="interiors-pic__img" src="img/slides/srub_View27.jpg"></a>
-                <a href="#x"><img  class="interiors-pic__img" src="img/slides/srub_View28.jpg"></a>
-                <a href="#x"><img  class="interiors-pic__img" src="img/slides/srub_View29.jpg"></a>
-                <a href="#x"><img  class="interiors-pic__img" src="img/slides/srub_View30.jpg"></a>
-            </section>
-        </article>
-
+        <div class="galleria-content">
+            <div id="galleria" >
+                    <a href="#"><img src="img/slides/srub_View22.jpg"><span>1</span></a>
+                    <a href="#"><img src="img/slides/srub_View23.jpg"><span>2</span></a>
+                    <a href="#"><img src="img/slides/srub_View24.jpg"><span>3</span></a>
+                    <a href="#"><img src="img/slides/srub_View25.jpg"><span>4</span></a>
+                    <a href="#"><img src="img/slides/srub_View26.jpg"><span>5</span></a>
+                    <a href="#"><img src="img/slides/srub_View27.jpg"><span>6</span></a>
+                    <a href="#"><img src="img/slides/srub_View28.jpg"><span>7</span></a>
+                    <a href="#"><img src="img/slides/srub_View29.jpg"><span>8</span></a>
+                    <a href="#"><img src="img/slides/srub_View30.jpg"><span>9</span></a>
+            </div>
+        </div>
     </main>
     <footer class="footer">
         <!--bottom-menu-->
         <nav class="menu menu--footer">
             <ul><!--
-                --><li class="menu__item current"><a href="interios.html">Интерьеры</a></li><!--
+                --><li class="menu__item"><a href="interios.html">Интерьеры</a></li><!--
                 --><li class="menu__item"><a href="#">Архитектура</a></li><!--
                 --><li class="menu__item"><a href="#">Графика</a></li><!--
                 --><li class="menu__item"><a href="#">Ландшафт</a></li><!--
@@ -87,5 +68,15 @@
         <p class="copyright">copyright © Алексей Цивин 2002 - 2015</p>
     </footer>
 </div>
+
+<script>
+
+    // Load the classic theme
+    Galleria.loadTheme('scripts/galleria.classic.js');
+
+    // Initialize Galleria
+    $('#galleria').galleria();
+
+</script>
 </body>
 </html>
