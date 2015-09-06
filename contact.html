@@ -1,10 +1,123 @@
 <!DOCTYPE html>
 <html>
-<head lang="en">
+<head lang="ru">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no, maximum-scale=1" />
     <meta charset="UTF-8">
-    <title></title>
+    <meta name="keywords" content="Алексей Цивин, Пенза, дизайн, архитектура, дизайнер интерьеров, архитектор, Цивин">
+    <meta name="description" content="дизайн интерьеров в Пензе">
+    <title>Мастерская визуального искусства</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <script src="https://api-maps.yandex.ru/2.0-stable/?load=package.standard&lang=ru-RU" type="text/javascript"> </script>
+    <script type="text/javascript" src="scripts/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="scripts/cycle.js"></script>
+    <script type="text/javascript" src="scripts/main.js"></script>
+
 </head>
 <body>
+<div class="page">
+    <!--header-->
+    <header class="header">
+        <div class="header__title">
+            <div class="header__title-text"><a href="index.html">Мастерская визуального искусства Алексея Цивина</a></div>
+        </div>
+        <!--top-menu-->
+        <nav>
+            <ul class="menu"><!--
+                -->
+                <li class="menu__item"><a href="about.html">О нас</a></li>
+                <!--
+                                -->
+                <li class="menu__item current"><a href="#x">Контакты</a></li>
+                <!--
+                                -->
+                <li class="menu__item width-item-menu">
+                    <a href="#" >Портфолио</a>
+                    <ul class="menu__sub-menu width-item-menu">
+                        <li class="menu__sub-menu-item width-item-menu"><a href="interios.html">Интерьеры</a></li>
+                        <li class="menu__sub-menu-item"><a href="#">Архитектура</a></li>
+                        <li class="menu__sub-menu-item"><a href="#">Графика</a></li>
+                        <li class="menu__sub-menu-item"><a href="#">Ландшафт</a></li>
+                        <li class="menu__sub-menu-item"><a href="#">Анимация</a></li>
+                    </ul>
+                </li>
+                <!--
+                                -->
+                <li class="menu__item"><a href="partners.html">Партнеры</a></li>
+                <!--
+                                -->
+                <li class="menu__item menu__item--last"><a href="price.html">Прайс</a></li>
+                <!--
+                            --></ul>
+        </nav>
+    </header>
+    <main class="contact">
+        <div id="map" class="contact__map"></div>
+        <div>
+            г. Пенза, ул. Захарова 1, офис 7<br>
 
+            тел: +79613529742        </div>
+    </main>
+
+    <footer>
+        <!--bottom-menu-->
+        <nav class="menu menu--footer">
+            <ul><!--
+                -->
+                <li class="menu__item"><a href="interios.html">Интерьеры</a></li>
+                <!--
+                                -->
+                <li class="menu__item"><a href="#">Архитектура</a></li>
+                <!--
+                                -->
+                <li class="menu__item"><a href="#">Графика</a></li>
+                <!--
+                                -->
+                <li class="menu__item"><a href="#">Ландшафт</a></li>
+                <!--
+                                -->
+                <li class="menu__item menu__item--last"><a href="#">Анимация</a></li>
+                <!--
+                            --></ul>
+        </nav>
+
+        <p class="copyright">copyright © Алексей Цивин 2002 - 201</p>
+    </footer>
+</div>
+<script type="text/javascript">
+    ymaps.ready(init);
+    var myMap,
+        myPlacemark;
+
+    function init() {
+        myMap = new ymaps.Map("map", {
+            center: [53.19430717, 45.00242134],
+            zoom: 15
+        });
+
+
+        myPlacemark = new ymaps.Placemark([53.19430717, 45.00242134], {
+            hintContent: 'Мастерская визуального искусства Алексея Цивина',
+            balloonContent: 'г. Пенза, ул. Захарова 1, офис 7<br>тел: +79613529742'
+        });
+
+        myMap.geoObjects.add(myPlacemark);
+
+
+        myMap.controls
+                .add('zoomControl', { left: 5, top: 5 })
+                .add('typeSelector')
+                .add('mapTools', { left: 35, top: 5 });
+
+
+        var trafficControl = new ymaps.control.TrafficControl();
+        myMap.controls
+                .add(trafficControl)
+                .add(new ymaps.control.MiniMap({
+                    type: 'yandex#publicMap'
+                }));
+    }
+
+
+</script>
 </body>
 </html>
