@@ -1,12 +1,12 @@
 #galleria {
   height:520px;
-  width: 660px;
+  width: 1024px;
   margin-top: 10px
 }
 .galleria-container {
   position: relative;
   overflow: hidden;
-  background: #000;
+  background: transparent;
 }
 .galleria-container img {
   -moz-user-select: none;
@@ -37,7 +37,7 @@
   height: 40px;
   width: 60px;
   margin: 0 5px 0 0;
-  border: 1px solid #000;;
+  border: 1px solid transparent;;
   float: left;
   cursor: pointer;
 }
@@ -46,12 +46,12 @@
   bottom: 10px;
   left: 10px;
   text-align: right;
-  color: #fff;
+  color: @color-text-menu;
   font: normal 11px/1 arial,sans-serif;
   z-index: 2;
 }
 .galleria-loader {
-  background: #000;
+  background: @color-text-header;
   width: 20px;
   height: 20px;
   position: absolute;
@@ -69,7 +69,7 @@
   position: absolute;
 }
 .galleria-info-text {
-  background-color: #000;
+  background-color:@color-text-menu;
   padding: 12px;
   display: none;
   /* IE7 */ zoom:1;
@@ -109,7 +109,7 @@
   width: 20px;
   height: 20px;
   cursor: pointer;
-  background-color: #000;
+  background-color: @color-text-menu;
 }
 .galleria-info-link:hover {
   opacity: 1;
@@ -175,7 +175,7 @@
 .galleria-thumb-nav-right:hover {
   opacity: 1;
   filter: alpha(opacity=100);
-  background-color: #111;
+  background-color: @color-text-menu;
 }
 .galleria-thumbnails-container .disabled:hover {
   opacity: 0.2;
